@@ -13,7 +13,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 400;
     line-height: 1.47059;
-    color: #1d1d1f;
+    color: #1e293b;
     background-color: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 600;
     line-height: 1.07143;
-    color: #1d1d1f;
+    color: #1e293b;
     letter-spacing: -0.022em;
 }
 
@@ -53,12 +53,12 @@ p {
     font-size: 1.1875rem;
     line-height: 1.52947;
     margin-bottom: 1.8rem;
-    color: #86868b;
+    color: #64748b;
     font-weight: 400;
 }
 
 a {
-    color: #1d1d1f;
+    color: #1e293b;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -98,12 +98,13 @@ a {
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
     font-size: 1.3125rem;
     font-weight: 600;
-    color: #1d1d1f;
-    transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    color: #1e293b;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .nav-logo:hover {
-    opacity: 0.8;
+    color: #0891b2;
+    transform: translateY(-1px);
 }
 
 .nav-menu {
@@ -115,16 +116,16 @@ a {
 .nav-link {
     font-size: 0.9375rem;
     font-weight: 400;
-    color: #1d1d1f;
+    color: #1e293b;
     position: relative;
-    transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     letter-spacing: -0.01em;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: #1d1d1f;
-    opacity: 0.7;
+    color: #0891b2;
+    transform: translateY(-1px);
 }
 
 .nav-link::after {
@@ -133,8 +134,8 @@ a {
     bottom: -8px;
     left: 0;
     width: 0;
-    height: 1px;
-    background-color: #1d1d1f;
+    height: 2px;
+    background: linear-gradient(90deg, #0891b2, #06b6d4);
     transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -147,15 +148,30 @@ a {
 .hero {
     padding: 140px 0 100px;
     text-align: center;
-    background: #000000;
-    color: #f5f5f7;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #f8fafc;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(8, 145, 178, 0.1) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .hero-title {
     margin-bottom: 1rem;
     opacity: 0;
     transform: translateY(30px);
-    color: #f5f5f7;
+    color: #f8fafc;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-subtitle {
@@ -163,10 +179,12 @@ a {
     line-height: 1.381;
     max-width: 680px;
     margin: 0 auto 3rem;
-    color: #a1a1a6;
+    color: #cbd5e1;
     opacity: 0;
     transform: translateY(30px);
     font-weight: 400;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-cta {
@@ -191,7 +209,7 @@ a {
     line-height: 1.381;
     max-width: 680px;
     margin: 0 auto;
-    color: #86868b;
+    color: #64748b;
     opacity: 0;
     transform: translateY(30px);
     font-weight: 400;
@@ -205,37 +223,54 @@ a {
     font-size: 1.0625rem;
     font-weight: 400;
     border-radius: 980px;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     cursor: pointer;
     border: none;
     text-align: center;
     min-width: 28px;
     letter-spacing: -0.01em;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-primary {
-    background: #0071e3;
+    background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%);
     color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0, 113, 227, 0.12);
+    box-shadow: 0 4px 14px rgba(8, 145, 178, 0.25);
 }
 
 .btn-primary:hover {
-    background: #0077ed;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 14px rgba(0, 113, 227, 0.25);
+    background: linear-gradient(135deg, #0e7490 0%, #0891b2 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(8, 145, 178, 0.4);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: #0071e3;
-    border: 1px solid #0071e3;
+    color: #0891b2;
+    border: 2px solid #0891b2;
 }
 
 .btn-secondary:hover {
-    background-color: #0071e3;
+    background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%);
     color: #ffffff;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 14px rgba(0, 113, 227, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(8, 145, 178, 0.3);
 }
 
 /* Sections */
@@ -263,7 +298,7 @@ section {
 
 /* About Section */
 .about {
-    background-color: #fbfbfd;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
 .about-content {
@@ -274,12 +309,12 @@ section {
 
 /* Attorneys Home Section */
 .attorneys-home {
-    background: #fbfbfd;
-    color: #1d1d1f;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    color: #1e293b;
 }
 
 .attorneys-home .section-title {
-    color: #1d1d1f;
+    color: #1e293b;
 }
 
 .attorneys-grid-home {
@@ -294,28 +329,52 @@ section {
     padding: 2.5rem;
     border-radius: 20px;
     text-align: center;
-    border: 0.5px solid rgba(0, 0, 0, 0.04);
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(8, 145, 178, 0.1);
+    box-shadow: 0 4px 20px rgba(8, 145, 178, 0.08);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     opacity: 0;
     transform: translateY(30px);
+    position: relative;
+    overflow: hidden;
+}
+
+.attorney-card-home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0891b2, #06b6d4);
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.attorney-card-home:hover::before {
+    transform: scaleX(1);
 }
 
 .attorney-card-home:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(8, 145, 178, 0.15);
+    border-color: rgba(8, 145, 178, 0.2);
 }
 
 .attorney-card-home h3 {
     font-size: 1.625rem;
     margin-bottom: 0.6rem;
-    color: #1d1d1f;
+    color: #1e293b;
     font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.attorney-card-home:hover h3 {
+    color: #0891b2;
 }
 
 .attorney-designation {
     font-size: 1.0625rem;
-    color: #86868b;
+    color: #64748b;
     margin-bottom: 0.5rem;
     font-weight: 400;
     line-height: 1.4;
@@ -328,13 +387,13 @@ section {
 }
 
 .attorney-email a {
-    color: #86868b;
+    color: #64748b;
     text-decoration: none;
-    transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .attorney-email a:hover {
-    opacity: 0.7;
+    color: #0891b2;
 }
 
 /* Services Section */
@@ -349,29 +408,51 @@ section {
     background: #ffffff;
     padding: 3rem;
     border-radius: 20px;
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 20px rgba(8, 145, 178, 0.08);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     opacity: 0;
     transform: translateY(30px);
-    border-left: 3px solid #0071e3;
-    border: 0.5px solid rgba(0, 0, 0, 0.04);
-    border-left: 3px solid #0071e3;
+    border: 1px solid rgba(8, 145, 178, 0.1);
+    border-left: 4px solid #0891b2;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: linear-gradient(180deg, #06b6d4, #0891b2);
+    transition: height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.service-card:hover::before {
+    height: 100%;
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
+    transform: translateY(-10px);
+    box-shadow: 0 16px 50px rgba(8, 145, 178, 0.15);
+    border-color: rgba(8, 145, 178, 0.2);
 }
 
 .service-card h3 {
     font-size: 1.625rem;
     margin-bottom: 1.2rem;
-    color: #1d1d1f;
+    color: #1e293b;
     font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.service-card:hover h3 {
+    color: #0891b2;
 }
 
 .service-card p {
-    color: #86868b;
+    color: #64748b;
     margin-bottom: 0;
     line-height: 1.6;
 }
