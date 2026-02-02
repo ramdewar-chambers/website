@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ramdewar-chambers.github.io/website/sitemap.xml
