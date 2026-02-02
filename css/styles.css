@@ -636,13 +636,14 @@ section {
 
 /* Contact Section */
 .contact-section {
-    background-color: #ffffff;
+    background: #f9fafb;
+    position: relative;
 }
 
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 5rem;
     align-items: start;
 }
 
@@ -651,32 +652,43 @@ section {
     transform: translateY(30px);
 }
 
-.contact-details {
-    margin-top: 2.5rem;
+.contact-info h2 {
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
 }
 
-.contact-item {
-    margin-bottom: 2.5rem;
+.contact-info > p {
+    margin-bottom: 3rem;
+    color: #6b7280;
+    font-size: 1.125rem;
+}
+
+.contact-details {
+    display: grid;
+    gap: 2.5rem;
 }
 
 .contact-item h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: #1d1d1f;
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+    font-weight: 600;
 }
 
 .contact-item p {
     margin-bottom: 0;
-    color: #86868b;
+    color: #6b7280;
+    line-height: 1.6;
 }
 
 .contact-item a {
-    color: #0071e3;
-    transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    color: #d97706;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-decoration: none;
 }
 
 .contact-item a:hover {
-    opacity: 0.8;
+    color: #b45309;
 }
 
 /* Contact Form */
@@ -688,18 +700,31 @@ section {
 .contact-form {
     background: #ffffff;
     padding: 3rem;
-    border-radius: 20px;
-    border: 0.5px solid rgba(0, 0, 0, 0.04);
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+    border-radius: 16px;
+    border: 1px solid rgba(217, 119, 6, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #d97706, #f59e0b);
 }
 
 .contact-form h2 {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
 }
 
 .contact-form > p {
     margin-bottom: 2.5rem;
-    color: #86868b;
+    color: #6b7280;
     line-height: 1.6;
 }
 
@@ -710,8 +735,8 @@ section {
 .form-group label {
     display: block;
     margin-bottom: 0.6rem;
-    font-weight: 400;
-    color: #1d1d1f;
+    font-weight: 500;
+    color: #1a1a1a;
     font-size: 1.0625rem;
 }
 
@@ -719,8 +744,8 @@ section {
 .form-group textarea {
     width: 100%;
     padding: 14px 18px;
-    border: 0.5px solid #d2d2d7;
-    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
     font-size: 1.0625rem;
     font-family: inherit;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -730,8 +755,8 @@ section {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #0071e3;
-    box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1);
+    border-color: #d97706;
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
 }
 
 .form-group textarea {
@@ -741,9 +766,96 @@ section {
 
 .form-note {
     font-size: 0.875rem;
-    color: #86868b;
+    color: #6b7280;
     margin-top: 1rem;
     margin-bottom: 0;
+}
+
+/* Attorneys Contact Section */
+.attorneys-contact {
+    background: linear-gradient(135deg, #1a1a1a 0%, #374151 100%);
+    color: #f9fafb;
+    position: relative;
+}
+
+.attorneys-contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 20%, rgba(217, 119, 6, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(75, 85, 99, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.attorneys-contact .section-title {
+    color: #f9fafb;
+    position: relative;
+    z-index: 1;
+}
+
+.attorneys-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.attorney-contact-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.attorney-contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 16px 48px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.attorney-contact-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.attorney-contact-card .attorney-title {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.contact-email {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(217, 119, 6, 0.1);
+    color: #d97706;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9375rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.contact-email:hover {
+    background: rgba(217, 119, 6, 0.2);
+    transform: translateY(-1px);
 }
 
 /* CTA Section */
@@ -923,6 +1035,11 @@ section {
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
+    }
+    
+    .attorneys-contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .footer-content {
