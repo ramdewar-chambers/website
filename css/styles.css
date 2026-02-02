@@ -14,7 +14,7 @@ body {
     font-weight: 400;
     line-height: 1.6;
     color: #2c2c2c;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -67,10 +67,10 @@ a {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(248, 249, 250, 0.95);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     z-index: 1000;
     transition: all 0.3s ease;
 }
@@ -136,7 +136,7 @@ a {
 .hero {
     padding: 160px 0 120px;
     text-align: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
     color: #ffffff;
 }
 
@@ -197,14 +197,14 @@ a {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    background: #1a1a1a;
     color: #ffffff;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #ee5a24 0%, #d63031 100%);
+    background: #333333;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(238, 90, 36, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .btn-secondary {
@@ -243,7 +243,7 @@ section {
 
 /* About Section */
 .about {
-    background-color: #ffffff;
+    background-color: #f8f9fa;
 }
 
 .about-content {
@@ -254,12 +254,12 @@ section {
 
 /* Attorneys Home Section */
 .attorneys-home {
-    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
-    color: #ffffff;
+    background: #f8f9fa;
+    color: #1a1a1a;
 }
 
 .attorneys-home .section-title {
-    color: #ffffff;
+    color: #1a1a1a;
 }
 
 .attorneys-grid-home {
@@ -270,12 +270,12 @@ section {
 }
 
 .attorney-card-home {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: #ffffff;
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(30px);
@@ -283,18 +283,18 @@ section {
 
 .attorney-card-home:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
 }
 
 .attorney-card-home h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: #ffffff;
+    color: #1a1a1a;
 }
 
 .attorney-designation {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: #6a6a6a;
     margin-bottom: 0;
     font-weight: 500;
 }
@@ -315,13 +315,13 @@ section {
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(30px);
-    border-left: 4px solid #74b9ff;
+    border-left: 4px solid #1a1a1a;
 }
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(116, 185, 255, 0.15);
-    border-left-color: #0984e3;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    border-left-color: #333333;
 }
 
 .service-card h3 {
@@ -434,9 +434,11 @@ section {
 }
 
 .contact-form {
-    background: #f8f8f8;
+    background: #ffffff;
     padding: 2.5rem;
     border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .contact-form h2 {
@@ -491,7 +493,7 @@ section {
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+    background: #1a1a1a;
     color: #ffffff;
     text-align: center;
 }
