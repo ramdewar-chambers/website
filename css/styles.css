@@ -13,25 +13,10 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 400;
     line-height: 1.47059;
-    color: #0f172a;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    color: #1a1a1a;
+    background: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    position: relative;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: -1;
 }
 
 /* Typography */
@@ -39,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 600;
     line-height: 1.07143;
-    color: #0f172a;
+    color: #1a1a1a;
     letter-spacing: -0.025em;
 }
 
@@ -48,10 +33,6 @@ h1 {
     font-weight: 700;
     margin-bottom: 1.2rem;
     letter-spacing: -0.03em;
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 h2 {
@@ -72,12 +53,12 @@ p {
     font-size: 1.1875rem;
     line-height: 1.52947;
     margin-bottom: 1.8rem;
-    color: #475569;
+    color: #6b7280;
     font-weight: 400;
 }
 
 a {
-    color: #0f172a;
+    color: #1a1a1a;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -95,10 +76,10 @@ a {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-bottom: 1px solid rgba(16, 185, 129, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     z-index: 1000;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -110,17 +91,17 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 70px;
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.5rem;
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #0f172a;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     text-decoration: none;
 }
@@ -130,20 +111,18 @@ a {
 }
 
 .logo-icon {
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #4b5563 100%);
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-weight: 700;
-    font-size: 1.125rem;
-    letter-spacing: -0.02em;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
-    position: relative;
-    overflow: hidden;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: -0.01em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .logo-icon::before {
@@ -153,9 +132,9 @@ a {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
     transform: rotate(45deg);
-    animation: logoShine 3s infinite;
+    animation: logoShine 4s infinite;
 }
 
 @keyframes logoShine {
@@ -173,7 +152,7 @@ a {
 .nav-link {
     font-size: 0.9375rem;
     font-weight: 500;
-    color: #0f172a;
+    color: #1a1a1a;
     position: relative;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     letter-spacing: -0.01em;
@@ -182,8 +161,7 @@ a {
 
 .nav-link:hover,
 .nav-link.active {
-    color: #10b981;
-    transform: translateY(-1px);
+    color: #d97706;
 }
 
 .nav-link::after {
@@ -193,7 +171,7 @@ a {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #10b981, #f59e0b);
+    background: linear-gradient(90deg, #d97706, #f59e0b);
     transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     border-radius: 1px;
 }
@@ -207,8 +185,8 @@ a {
 .hero {
     padding: 160px 0 120px;
     text-align: center;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-    color: #f8fafc;
+    background: linear-gradient(135deg, #1a1a1a 0%, #374151 100%);
+    color: #f9fafb;
     position: relative;
     overflow: hidden;
 }
@@ -221,43 +199,19 @@ a {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 30% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 70% 80%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 30% 20%, rgba(217, 119, 6, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(75, 85, 99, 0.1) 0%, transparent 50%);
     pointer-events: none;
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        radial-gradient(circle at 25% 25%, rgba(16, 185, 129, 0.8) 0px, transparent 1px),
-        radial-gradient(circle at 75% 75%, rgba(245, 158, 11, 0.6) 0px, transparent 1px);
-    background-size: 60px 60px;
-    animation: float 20s ease-in-out infinite;
-    opacity: 0.3;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(180deg); }
 }
 
 .hero-title {
     margin-bottom: 1.5rem;
     opacity: 0;
     transform: translateY(30px);
-    color: #f8fafc;
+    color: #f9fafb;
     position: relative;
     z-index: 1;
     font-size: clamp(3rem, 6vw, 4.5rem);
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .hero-subtitle {
@@ -265,7 +219,7 @@ a {
     line-height: 1.381;
     max-width: 680px;
     margin: 0 auto 3rem;
-    color: #cbd5e1;
+    color: #d1d5db;
     opacity: 0;
     transform: translateY(30px);
     font-weight: 400;
@@ -295,7 +249,7 @@ a {
     line-height: 1.381;
     max-width: 680px;
     margin: 0 auto;
-    color: #64748b;
+    color: #6b7280;
     opacity: 0;
     transform: translateY(30px);
     font-weight: 400;
@@ -308,7 +262,7 @@ a {
     padding: 16px 32px;
     font-size: 1.0625rem;
     font-weight: 500;
-    border-radius: 12px;
+    border-radius: 8px;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     cursor: pointer;
     border: none;
@@ -320,16 +274,15 @@ a {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
     color: #ffffff;
-    box-shadow: 0 8px 32px rgba(16, 185, 129, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 14px rgba(217, 119, 6, 0.3);
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #059669 0%, #047857 100%);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 40px rgba(16, 185, 129, 0.4);
+    background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(217, 119, 6, 0.4);
 }
 
 .btn-primary::before {
@@ -339,7 +292,7 @@ a {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.6s;
 }
 
@@ -348,17 +301,16 @@ a {
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    color: #10b981;
-    border: 2px solid rgba(16, 185, 129, 0.3);
+    background-color: transparent;
+    color: #d97706;
+    border: 2px solid #d97706;
 }
 
 .btn-secondary:hover {
-    background: rgba(16, 185, 129, 0.1);
-    border-color: rgba(16, 185, 129, 0.5);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 40px rgba(16, 185, 129, 0.2);
+    background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(217, 119, 6, 0.3);
 }
 
 /* Sections */
@@ -386,21 +338,8 @@ section {
 
 /* About Section */
 .about {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: #f9fafb;
     position: relative;
-}
-
-.about::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 20% 80%, rgba(245, 158, 11, 0.03) 0%, transparent 50%);
-    pointer-events: none;
 }
 
 .about-content {
@@ -411,8 +350,8 @@ section {
 
 /* Attorneys Home Section */
 .attorneys-home {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-    color: #0f172a;
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    color: #f9fafb;
     position: relative;
 }
 
@@ -424,13 +363,13 @@ section {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.03) 0%, transparent 50%);
+        radial-gradient(circle at 20% 20%, rgba(217, 119, 6, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(75, 85, 99, 0.08) 0%, transparent 50%);
     pointer-events: none;
 }
 
 .attorneys-home .section-title {
-    color: #0f172a;
+    color: #f9fafb;
     position: relative;
     z-index: 1;
 }
@@ -443,16 +382,16 @@ section {
 }
 
 .attorney-card-home {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     padding: 2.5rem;
-    border-radius: 24px;
+    border-radius: 16px;
     text-align: center;
-    border: 1px solid rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 
-        0 8px 32px rgba(16, 185, 129, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     opacity: 0;
     transform: translateY(30px);
     position: relative;
@@ -465,17 +404,10 @@ section {
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #10b981, #f59e0b, #10b981);
-    background-size: 200% 100%;
-    animation: gradientShift 3s ease infinite;
+    height: 3px;
+    background: linear-gradient(90deg, #d97706, #f59e0b);
     opacity: 0;
     transition: opacity 0.3s ease;
-}
-
-@keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
 }
 
 .attorney-card-home:hover::before {
@@ -483,35 +415,28 @@ section {
 }
 
 .attorney-card-home:hover {
-    transform: translateY(-12px) scale(1.02);
+    transform: translateY(-8px);
     box-shadow: 
-        0 20px 60px rgba(16, 185, 129, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.7);
-    border-color: rgba(16, 185, 129, 0.2);
+        0 16px 48px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    border-color: rgba(217, 119, 6, 0.2);
 }
 
 .attorney-card-home h3 {
     font-size: 1.625rem;
     margin-bottom: 0.6rem;
-    color: #0f172a;
+    color: #1a1a1a;
     font-weight: 600;
     transition: all 0.3s ease;
-    background: linear-gradient(135deg, #0f172a 0%, #10b981 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .attorney-card-home:hover h3 {
-    background: linear-gradient(135deg, #10b981 0%, #f59e0b 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #d97706;
 }
 
 .attorney-designation {
     font-size: 1.0625rem;
-    color: #475569;
+    color: #6b7280;
     margin-bottom: 0.5rem;
     font-weight: 500;
     line-height: 1.4;
@@ -524,18 +449,17 @@ section {
 }
 
 .attorney-email a {
-    color: #64748b;
+    color: #9ca3af;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     padding: 0.25rem 0.5rem;
-    border-radius: 6px;
-    background: rgba(16, 185, 129, 0.05);
+    border-radius: 4px;
+    background: rgba(107, 114, 128, 0.1);
 }
 
 .attorney-email a:hover {
-    color: #10b981;
-    background: rgba(16, 185, 129, 0.1);
-    transform: translateY(-1px);
+    color: #d97706;
+    background: rgba(217, 119, 6, 0.1);
 }
 
 /* Services Section */
